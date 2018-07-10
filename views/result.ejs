@@ -1,0 +1,168 @@
+<% include header %>
+	<div class="main main-raised">
+		<div class="section">
+			<div class="container">
+				<div class="title">
+					<div class="row">
+						<div class="pull-right">
+							<span>Cập nhật:</span>
+							<span class="label label-rose">9/7/2018</span>
+							<span>Tình Trạng:</span>
+							<span class="label label-success">Hoạt động</span>
+						</div>
+					</div>
+					<div class="row">
+						<%if (result.status == "success") { %>
+							<%if (result.type == "video") { %>
+								<h2>Link Gốc</h2>
+								<div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+									<div class="form-group">
+										<input id="result_url" type="text" value="<%= result.video_url %>" class="form-control" />
+										<button class="btn btn-success btn-round" id="copy_url">
+											<i class="material-icons">file_copy</i>Copy Link
+											<div class="ripple-container"></div>
+										</button>
+										<a href="<%= result.video_url %>" target="_blank">
+											<button class="btn btn-rose btn-round">
+												<i class="material-icons">tab</i>New Tab
+												<div class="ripple-container"></div>
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+									<div class="card card-blog">
+										<div class="card-image">
+											<video style="width:100%" controls autoplay>
+												<source src="<%= result.video_url %>" type="video/mp4"> Your browser does not support the video tag.
+											</video>
+											<div class="card-content">
+												<h6 class="category text-danger">
+													<i class="material-icons">trending_up</i> Trending
+												</h6>
+												<div class="text-center">
+													<a href="/" class="btn btn-success btn-round">
+														<i class="material-icons">restore</i>Tiếp Tục Get
+														<div class="ripple-container"></div>
+													</a>
+												</div>
+												<div class="footer">
+													<div class="stats">
+														<i class="material-icons">schedule</i> Just Now
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							<% }else if (result.type == "image"){ %>
+								<h2>Link Gốc</h2>
+									<div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<div class="form-group">
+											<input id="result_url" type="text" value="<%= result.image_url %>" class="form-control" />
+											<button class="btn btn-success btn-round" id="copy_url">
+												<i class="material-icons">file_copy</i>Copy Link
+												<div class="ripple-container"></div>
+											</button>
+											<a href="<%= result.image_url %>" target="_blank">
+												<button class="btn btn-rose btn-round">
+													<i class="material-icons">tab</i>New Tab
+													<div class="ripple-container"></div>
+												</button>
+											</a>
+										</div>
+									</div>
+									<div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<div class="card card-blog">
+											<div class="card-image">
+												<a href="#pablo">
+													<img class="img" src="<%= result.image_url %>">
+												</a>
+												<div class="colored-shadow" style="background-image: url(&quot;<%= result.image_url %>&quot;); opacity: 1;"></div>
+												<div class="ripple-container"></div>
+											</div>
+											<div class="card-content">
+												<h6 class="category text-danger">
+													<i class="material-icons">trending_up</i> Trending
+												</h6>
+												<div class="text-center">
+													<a href="/" class="btn btn-success btn-round">
+														<i class="material-icons">restore</i>Tiếp Tục Get
+														<div class="ripple-container"></div>
+													</a>
+												</div>
+												<div class="footer">
+													<div class="stats">
+														<i class="material-icons">schedule</i> Just Now
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							<% } %>
+						<% }else if (result.status == "fail"){ %>
+							<br>
+							<div class="alert alert-danger">
+								<div class="container">
+									<div class="alert-icon">
+									   <i class="material-icons">error_outline</i>
+								   </div>
+								   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									   <span aria-hidden="true"><i class="material-icons">clear</i></span>
+								   </button>
+									<b>Thông báo lỗi:</b><%= result.messages %>
+							   </div>
+						   </div>
+						   	<div class="text-center">
+								<a href="/" class="btn btn-success btn-round">
+									<i class="material-icons">restore</i>Tiếp Tục Get
+									<div class="ripple-container"></div>
+								</a>
+							</div>						   						
+						<% } %>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer footer-black footer-big">
+			<div class="container">
+				<hr/>
+				<div class="copyright pull-right">
+					Copyright &copy; 2018 HellCatVN-Get Instagram All Rights Reserved.
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/material.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="assets/js/moment.min.js"></script>
+
+<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+
+<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="assets/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+
+<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="assets/js/bootstrap-selectpicker.js" type="text/javascript"></script>
+
+<!--	Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+<script src="assets/js/bootstrap-tagsinput.js"></script>
+
+<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="assets/js/jasny-bootstrap.min.js"></script>
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="assets/js/material-kit.js?v=1.2.1" type="text/javascript"></script>
+<script>
+	document.getElementById("copy_url").onclick = function () {
+		$('#result_url').select();
+		document.execCommand('copy');
+	}
+</script>
+
+</html>
