@@ -38,18 +38,18 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons">account_circle</i> About Me
+                            <i class="material-icons">account_circle</i> <%= __('aboutme') %>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-with-icons">
                             <li>
                                 <a href="https://blog.hellcatvn.com/">
-                                    <i class="material-icons">list</i> Blogs
+                                    <i class="material-icons">list</i> <%= __('blog') %>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://blog.hellcatvn.com/about-me">
-                                    <i class="material-icons">call</i> Contacts
+                                    <i class="material-icons">call</i> <%= __('contacts') %>
                                 </a>
                             </li>
 
@@ -58,31 +58,39 @@
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons">view_carousel</i> Others
+                            <i class="material-icons">view_carousel</i> <%= __('other') %>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-with-icons">
                             <li>
-                                <a href="https://blog.hellcatvn.com/about-me">
-                                    <i class="material-icons">account_balance</i> About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://blog.hellcatvn.com/">
-                                    <i class="material-icons">art_track</i> Blog Post
-                                </a>
-                            </li>
-                            <li>
                                 <a href="https://blog.hellcatvn.com/chat-fuel-01-api-instagram/">
-                                    <i class="material-icons">apps</i> API Get Instagram
+                                    <i class="material-icons">apps</i> <%= __('api-feature') %>
                                 </a>
                             </li>                            
                         </ul>
                     </li>
 
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="material-icons">language</i> <%= __('language') %>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-with-icons">
+                            <li>
+                                <a href="/change-lang/vi">
+                                    <%= __('language-vi') %>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/change-lang/en">
+                                    <%= __('language-en') %>
+                                </a>
+                            </li>                         
+                        </ul>
+                    </li>
                     <li class="button-container">
                         <a href="https://blog.hellcatvn.com/donate" target="_blank" class="btn btn-rose btn-round">
-                            <i class="material-icons">free_breakfast</i> Donate
+                            <i class="material-icons">free_breakfast</i> <%= __('donate') %>
                         </a>
                     </li>
                 </ul>
@@ -100,7 +108,7 @@
 							</div>
 						</h1>
 
-						<h3 class="title">Tools help you save picture and video instagram</h3>
+						<h3 class="title"><%= __('banner') %></h3>
 					</div>
 				</div>
 			</div>

@@ -2,11 +2,13 @@ var express = require('express');
 var urlMetadata = require('url-metadata')
 var request = require('request');
 var JSSoup = require("jssoup").default;
+var i18n = require("i18n");
 
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  console.log(req.getLocale());
   res.render("index");
 });
 router.get('/get.html', function(req, res, next) {

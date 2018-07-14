@@ -5,10 +5,10 @@
                 <div class="title">
                     <div class="row">
                         <div class="pull-right">
-                            <span>Cập nhật:</span>
+                            <span><%= __('update-time') %>:</span>
                             <span class="label label-rose">9/7/2018</span>
-                            <span>Tình Trạng:</span>
-                            <span class="label label-success">Hoạt động</span>
+                            <span><%= __('status') %>:</span>
+                            <span class="label label-success"><%= __('status-on') %></span>
                         </div>
                     </div>
                     <br>
@@ -23,13 +23,13 @@
 	            						<li class="active">
 	            							<a href="#whats-new" role="tab" data-toggle="tab" aria-expanded="true">
 	            								<i class="material-icons">whatshot</i>
-	            								Có Gì Mới ? (0.0.1)
+	            								<%= __('whatnews') %> ? (0.0.1)
 	            							</a>
 	            						</li>
 	            						<li class="">
 	                                        <a href="#future-feature" role="tab" data-toggle="tab" aria-expanded="false">
 	            								<i class="material-icons">update</i>
-	            								Tính năng sắp tới
+	            								<%= __('futurefeature') %>
 	                                        </a>
 	                                    </li>
 	                                </ul>
@@ -37,46 +37,48 @@
 	                            <div class="col-md-8">
 	                                <div class="tab-content">
 	                            	    <div class="tab-pane active" id="whats-new">
-                                          Cập nhật đầu tiên:
+                                          : <%= __('whatnews-line0') %> 
 	                            	      <br><br>
-                                          - Cho phép người dùng sử dụng những tính năng cơ bản tải các video và ảnh công khai (Public)
+                                          - <%= __('whatnews-line1') %> 
                                           <br>
-                                          - Nâng cấp giao diện material từ bootstrap thuần
+                                          - <%= __('whatnews-line2') %> 
                                           <br>
-                                          - Cập nhật gif hướng dẫn sử dụng
+                                          - <%= __('whatnews-line3') %> 
+                                          <br>
+                                          - <%= __('whatnews-line4') %> 
 	                            	    </div>
 	                            	    <div class="tab-pane" id="future-feature">
-                                            Tính năng dự kiến ra mắt trong thời gian tới:
+                                            <%= __('futurefeature-line0') %> 
                                             <br><br>
-                                            - Cập nhật nhiều ngôn ngữ cho giao diện
+                                            - <%= __('futurefeature-line1') %> 
                                             <br>
-                                            - Thêm tính năng tải ảnh private khi có cookie
+                                            - <%= __('futurefeature-line2') %> 
                                             <br>
-                                            - Thêm khả năng tải album
+                                            - <%= __('futurefeature-line3') %> 
                                             <br>
-                                            - Thêm tính năng tải video dạng ảnh
+                                            - <%= __('futurefeature-line4') %> 
                                         </div>
 	                            	</div>
 	                            </div>
 	                        </div>
 
                         </div>
-                        <h2>Thông tin cơ bản:</h2>
-                        <h4>-Tool chỉ hỗ trợ get những ảnh và video công khai.</h4>
-                        <h4>-Còn về những ảnh video private mà bạn có thể nhìn thấy thì bạn có thể tham khảo hướng dẫn
+                        <h2><%= __('basic-info') %>:</h2>
+                        <h4>-<%= __('basic-info-line1') %>.</h4>
+                        <h4>-<%= __('basic-info-line2') %>
                             <a href="https://blog.hellcatvn.com/userscript-03-get-image-insta/"
-                                style="color:red">tại đây</a>
+                                style="color:red"><%= __('basic-info-line2-2') %></a>
                         </h4>
-                        <h2>Công Cụ Get Instagram:</h2>
+                        <h2><%= __('basic-tool-title') %>:</h2>
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
                                 <form action="/get.html" method="POST">
                                     <div class="form-group">
-                                        <input name="url" type="text" value="" placeholder="Nhập vào link cần tải" class="form-control" />
+                                        <input name="url" type="text" value="" placeholder="<%= __('basic-tool-placeholder') %>" class="form-control" />
                                     </div>
                                     <div class="text-center">
                                         <button class="btn btn-success btn-round" type="submit">
-                                            <i class="material-icons">favorite</i>Get
+                                            <i class="material-icons">favorite</i> <%= __('basic-tool-button') %>
                                             <div class="ripple-container"></div>
                                         </button>
                                     </div>
@@ -84,7 +86,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <h3>Hướng dẫn sử dụng tính năng cơ bản:</h3>
+                            <h3><%= __('tutorial-title') %>:</h3>
                             <img src="assets/img/tutorial.gif" alt="tutorial" class="img-rounded img-responsive img-raised">
                         </div>
                     </div>
