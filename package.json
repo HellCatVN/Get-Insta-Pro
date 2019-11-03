@@ -14,8 +14,8 @@
     "http-errors": "~1.6.2",
     "i18n": "^0.8.3",
     "jssoup": "0.0.7",
-    "morgan": "~1.9.0",
-    "request": "^2.85.0",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
     "url-metadata": "^2.1.7"
   }
 }
